@@ -3,6 +3,8 @@
   top: 10px;
   left: 60px;
   display: none;
+  opacity: 0;
+  transition: all .5s;
 }
 
 #logo img{
@@ -13,6 +15,7 @@
 
 #header.header-scrolled #logo{
   display: block !important;
+  opacity: 1;
 }
 
 #ksum-footer {
@@ -149,4 +152,47 @@
   color:#fff;
   padding:14px;
   margin:0px;
+}
+
+#main_logo{
+  animation-name: woble; 
+  animation-duration: 5s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* #main_logo:hover {
+  -webkit-animation-name: rotate; 
+  -webkit-animation-duration: 2s; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotate; 
+  -moz-animation-duration: 2s; 
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  animation-name: rotate; 
+  animation-duration: 2s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} */
+
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotateY(0deg);}
+  to {-webkit-transform: rotateY(360deg);}
+}
+
+@-moz-keyframes rotate {
+  from {-moz-transform: rotateY(0deg);}
+  to {-moz-transform: rotateY(360deg);}
+}
+
+@keyframes rotate {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
+
+@keyframes woble {
+  0%   {transform: rotateY(0deg);}
+  50%  {transform: rotateY(-50deg);}
+  100% {transform: rotateY(0deg);}
 }
